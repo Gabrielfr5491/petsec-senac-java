@@ -1,0 +1,258 @@
+/* ======================================================
+   BASE DO SISTEMA - VISUAL
+   ====================================================== */
+.root {
+    -fx-font-family: "Segoe UI", "Inter", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: linear-gradient(to bottom, #f5f7fa, #eef1f5);
+}
+
+/* ------------------------------------------------------
+   EFEITOS E VARIÁVEIS
+   ------------------------------------------------------ */
+:root {
+    -fx-light-shadow: dropshadow(gaussian, rgba(0,0,0,0.10), 20, 0, 0, 6);
+    -fx-medium-shadow: dropshadow(gaussian, rgba(0,0,0,0.18), 30, 0, 0, 10);
+    -fx-round: 14px;
+}
+
+/* ======================================================
+   SIDEBAR 
+   ====================================================== */
+.sidebar {
+    -fx-background-color: white;
+    -fx-padding: 30px 20px;
+    -fx-pref-width: 255px;
+    -fx-background-radius: 0 20 20 0;
+    -fx-effect: -fx-medium-shadow;
+}
+
+.sidebar-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 25 5;
+    -fx-text-fill: #222;
+}
+
+.menu-btn {
+    -fx-background-color: transparent;
+    -fx-padding: 14px 18px;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #444;
+    -fx-transition: 0.25s;
+}
+
+.menu-btn:hover {
+    -fx-background-color: rgba(0,0,0,0.06);
+    -fx-cursor: hand;
+}
+
+/* Botão selecionado */
+.menu-btn:selected, .menu-btn:focused {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: white;
+}
+
+/* ======================================================
+   CABEÇALHO
+   ====================================================== */
+.header {
+    -fx-padding: 20px 30px;
+    -fx-background-color: white;
+    -fx-background-radius: 0 0 18px 18px;
+    -fx-effect: -fx-light-shadow;
+}
+
+.header-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 800;
+}
+
+/* 
+   CARDS  (Dashboard)
+    */
+.card {
+    -fx-background-color: rgba(255,255,255,0.85);
+    -fx-padding: 26px;
+    -fx-background-radius: 20px;
+    -fx-effect: -fx-medium-shadow;
+    -fx-border-color: rgba(255,255,255,0.4);
+    -fx-border-radius: 20px;
+    -fx-background-insets: 0;
+}
+
+.card-title {
+    -fx-font-size: 15px;
+    -fx-text-fill: #666;
+    -fx-font-weight: 600;
+}
+
+.card-number {
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222;
+    -fx-padding: 12px 0 0 0;
+}
+
+/* FORMULÁRIOS COM "FLOATING LABELS"
+    */
+.form-group {
+    -fx-padding: 12px 0;
+    -fx-spacing: 5px;
+}
+
+.text-field,
+.password-field,
+.combo-box,
+.date-picker,
+.text-area {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d2d6de;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px 12px;
+    -fx-font-size: 15px;
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused,
+.date-picker:focused,
+.text-area:focused {
+    -fx-border-color: -fx-accent;
+    -fx-background-color: white;
+}
+
+/* Label flutuante  */
+.floating-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #555;
+    -fx-padding: 0 0 3 3;
+}
+
+/* 
+   BOTÕES  (com gradiente e animação)
+   */
+.button {
+    -fx-background-radius: 14px;
+    -fx-padding: 12px 20px;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-transition: 0.25s;
+}
+
+.button:hover {
+    -fx-opacity: 0.88;
+}
+
+.button:pressed {
+    -fx-opacity: 0.75;
+}
+
+/* Botão principal com gradiente */
+.btn-primary {
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(to right, derive(-fx-accent, 10%), -fx-accent);
+    -fx-effect: -fx-light-shadow;
+}
+
+/* Botão suave */
+.btn-soft {
+    -fx-background-color: rgba(0,0,0,0.06);
+    -fx-text-fill: #333;
+}
+
+.btn-soft:hover {
+    -fx-background-color: rgba(0,0,0,0.12);
+}
+
+/* 
+   TABELA 
+    */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 14px;
+    -fx-border-color: #d0d4da;
+    -fx-border-radius: 14px;
+    -fx-effect: -fx-light-shadow;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f1f4f8;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: white;
+}
+
+/* 
+   LOGIN 
+   */
+.login-bg {
+    -fx-background-color: linear-gradient(to bottom right, -fx-accent, derive(-fx-accent, -20%));
+}
+
+.login-card {
+    -fx-background-color: white;
+    -fx-padding: 40px;
+    -fx-background-radius: 20px;
+    -fx-effect: -fx-medium-shadow;
+}
+
+.login-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222;
+}
+
+
+   /*TEMAS AZUL */
+
+
+.tema-azul {
+    -fx-accent: #1b6dff;
+}
+
+.tema-azul .sidebar {
+    -fx-background-color: linear-gradient(to top, #eaf1ff, #5d88ed);
+}
+
+.tema-azul .menu-btn:hover {
+    -fx-background-color: rgba(70,120,255,0.25);
+}
+
+.tema-azul .btn-primary {
+    -fx-background-color: linear-gradient(to right, #4e8dff, #1b6dff);
+}
+
+.tema-azul .title {
+    -fx-text-fill: #124bbf;
+}
+
+/* ------------- TEMA LARANJA  ------------- */
+.tema-laranja {
+    -fx-accent: #ff7a25;
+}
+
+.tema-laranja .sidebar {
+    -fx-background-color: linear-gradient(to top, #fff0e5, #dc7f3c);
+}
+
+.tema-laranja .menu-btn:hover {
+    -fx-background-color: rgba(255,140,70,0.25);
+}
+
+.tema-laranja .btn-primary {
+    -fx-background-color: linear-gradient(to right, #ffa96a, #ff7a25);
+}
+
+.tema-laranja .title {
+    -fx-text-fill: #c35412;
+}
