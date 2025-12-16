@@ -1,0 +1,60 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build PetshopFX",
+			"type": "shell",
+			"command": "java",
+			"args": [
+				"-m",
+				"jdk.compiler/com.sun.tools.javac.Main",
+				"--module-path",
+				"${env:USERPROFILE}/Downloads/javafx/Main/lib",
+				"-cp",
+				"lib/mysql-connector-j-9.5.0.jar",
+				"-d",
+				"bin",
+				"petsec_senac/src/petsec_senac/*.java",
+				"petsec_senac/src/dao/*.java",
+				"petsec_senac/src/jdbc/*.java"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Run PetshopFX",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/c",
+				"setup-and-run.bat"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"dependsOn": ["Build PetshopFX"],
+			"isBackground": true,
+			"problemMatcher": [],
+			"presentation": {
+				"reveal": "always"
+			}
+		},
+		{
+			"label": "Test Connection",
+			"type": "shell",
+			"windows": {
+				"command": "cmd.exe",
+				"args": [
+					"/c",
+					"test-connection.bat"
+				]
+			},
+			"presentation": {
+				"reveal": "always"
+			}
+		}
+	]
+}

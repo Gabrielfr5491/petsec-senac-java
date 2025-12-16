@@ -1,0 +1,360 @@
+/* ======================================================
+      VARIÁVEIS DO TEMA BASE (TEMA AZUL ESCURO)
+   ====================================================== */
+.root {
+    /* Azul */
+    -fx-cor-primaria: #1b6dff;
+    -fx-cor-primaria-escura: #144dbb;
+    -fx-cor-gradiente1: #4e8dff;
+    -fx-cor-gradiente2: #1b6dff;
+
+    /* Hover */
+    -fx-hover: rgba(27,109,255,0.20);
+
+    /* Fundo escuro */
+    -fx-bg-claro: #0d1a30;
+    -fx-bg-medio: #14294b;
+
+    /* Sombras */
+    -fx-card-shadow: dropshadow(gaussian, rgba(27,109,255,0.35), 20, 0, 0, 6);
+
+    /* Texto claro */
+    -fx-texto: #f1f2f4;
+
+    -fx-font-family: "Segoe UI", "Inter", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: linear-gradient(to top, -fx-bg-claro, -fx-bg-medio);
+}
+
+
+/* ======================================================
+      TEMA LARANJA (TEMA CLARO)
+      — sobrescreve apenas variáveis
+   ====================================================== */
+.tema-laranja {
+    -fx-cor-primaria: #ff7a25;
+    -fx-cor-primaria-escura: #d96418;
+    -fx-cor-gradiente1: #ffb27a;
+    -fx-cor-gradiente2: #ff7a25;
+
+    -fx-hover: rgba(255,122,37,0.20);
+
+    /* Fundo claro */
+    -fx-bg-claro: #ffffff;
+    -fx-bg-medio: #ffe0cc;
+
+    /* Sombras */
+    -fx-card-shadow: dropshadow(gaussian, rgba(255,122,37,0.35), 20, 0, 0, 6);
+
+    /* Texto escuro */
+    -fx-texto: #383737;
+
+    -fx-background-color: linear-gradient(to top, -fx-bg-claro, -fx-bg-medio);
+}
+
+
+/* ======================================================
+      SIDEBAR
+   ====================================================== */
+
+.sidebar {
+    -fx-padding: 32px 20px;
+    -fx-background-radius: 0 25 25 0;
+    -fx-background-color: -fx-bg-medio;
+    -fx-effect: -fx-card-shadow;
+}
+
+.sidebar-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-texto;
+}
+
+.menu-btn {
+    -fx-background-color: transparent;
+    -fx-padding: 12px 20px;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-text-fill: -fx-texto;
+    -fx-background-radius: 12px;
+}
+
+.menu-btn:hover {
+    -fx-background-color: -fx-hover;
+    -fx-cursor: hand;
+}
+
+
+/* ======================================================
+      HEADER
+   ====================================================== */
+
+.header {
+    -fx-background-color: -fx-bg-medio;
+    -fx-padding: 18px 30px;
+    -fx-background-radius: 0 0 20px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 18, 0, 0, 4);
+}
+
+.header-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 800;
+    -fx-text-fill: -fx-texto;
+}
+
+
+/* ======================================================
+      CARDS
+   ====================================================== */
+
+.card {
+    -fx-background-color: rgba(255,255,255,0.10);
+    -fx-padding: 26px;
+    -fx-background-radius: 20px;
+    -fx-effect: -fx-card-shadow;
+    -fx-border-color: rgba(255,255,255,0.15);
+    -fx-border-radius: 20px;
+}
+
+.tema-laranja .card {
+    -fx-background-color: white;
+    -fx-border-color: #ffd0a6;
+}
+
+.card-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: -fx-texto;
+    -fx-opacity: 0.75;
+}
+
+.card-number {
+    -fx-font-size: 44px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-texto;
+}
+
+
+/* ======================================================
+      INPUTS / FORMULÁRIOS
+   ====================================================== */
+
+.text-field,
+.password-field,
+.combo-box,
+.date-picker,
+.text-area {
+    -fx-background-color: rgba(255, 255, 255, 0.226);
+    -fx-border-color: rgba(255,255,255,0.20);
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 10px 12px;
+    -fx-font-size: 15px;
+    -fx-text-fill: -fx-texto;
+}
+
+.text-field:focused,
+.password-field:focused,
+.combo-box:focused,
+.date-picker:focused,
+.text-area:focused {
+    -fx-border-color: -fx-cor-primaria;
+    -fx-effect: dropshadow(gaussian, -fx-cor-primaria, 15, 0.3, 0, 0);
+}
+
+
+/* ======================================================
+      TABELAS
+   ====================================================== */
+
+.table-view {
+    -fx-background-color: -fx-bg-medio;
+    -fx-border-radius: 14px;
+    -fx-background-radius: 14px;
+    -fx-border-color: rgba(255,255,255,0.15);
+}
+
+.table-view .column-header {
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-font-weight: 700;
+    -fx-padding: 10px;
+    -fx-text-fill: -fx-texto;
+}
+
+.table-row-cell {
+    -fx-text-fill: -fx-texto;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: -fx-cor-primaria;
+    -fx-text-fill: white;
+}
+
+
+/* ======================================================
+      LOGIN
+   ====================================================== */
+
+.login-bg {
+    -fx-background-color: linear-gradient(to bottom right, -fx-cor-primaria, -fx-cor-primaria-escura);
+}
+
+.login-card {
+    -fx-background-color: rgba(255,255,255,0.12);
+    -fx-padding: 40px;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 25, 0, 0, 4);
+    -fx-border-color: rgba(255,255,255,0.20);
+    -fx-border-radius: 20px;
+}
+
+.login-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: 900;
+    -fx-text-fill: white;
+}
+
+
+/* ======================================================
+      BOTÕES MODERNOS
+   ====================================================== */
+
+.button {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-width: 2px;
+
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0.20, 0, 2);
+
+    -fx-background-color: -btn-bg;
+    -fx-border-color: -btn-border;
+    -fx-text-fill: -btn-text;
+}
+
+.button:hover {
+    -fx-background-color: -btn-hover-bg;
+    -fx-border-color: -btn-hover-border;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 12, 0.25, 0, 3);
+    -fx-translate-y: -2;
+}
+
+.button:pressed {
+    -fx-translate-y: 1;
+    -fx-effect: none;
+}
+
+
+/* MENU LATERAL */
+.menu-btn {
+    -fx-font-size: 16px;
+    -fx-padding: 12px;
+
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+
+    -fx-background-color: -sidebar-btn-bg;
+    -fx-text-fill: -btn-text;
+    -fx-border-color: transparent;
+}
+
+.menu-btn:hover {
+    -fx-background-color: -sidebar-btn-hover;
+}
+
+
+/* BOTÃO DO LOGIN */
+.enter-button {
+    -fx-font-size: 17px;
+    -fx-padding: 12px;
+
+    -fx-background-radius: 14px;
+    -fx-border-radius: 14px;
+
+    -fx-background-color: -login-btn-bg;
+    -fx-text-fill: white;
+}
+
+.enter-button:hover {
+    -fx-background-color: -login-btn-hover;
+}
+
+
+/* ======================================================
+      SISTEMA DE TEMAS — BOTÕES
+   ====================================================== */
+
+.root, .tema-azul {
+    -btn-bg: #1E65A6;
+    -btn-border: #143F6B;
+    -btn-hover-bg: #2D7EC2;
+    -btn-hover-border: #1B4F7E;
+    -btn-text: white;
+
+    -sidebar-btn-bg: #154A80;
+    -sidebar-btn-hover: #1E65A6;
+
+    -login-btn-bg: #1E65A6;
+    -login-btn-hover: #2A79C7;
+}
+
+/* Tema Laranja */
+.tema-laranja {
+    -btn-bg: #FFA84D;
+    -btn-border: #CC7C20;
+    -btn-hover-bg: #FFB46A;
+    -btn-hover-border: #D88930;
+    -btn-text: #3A2A00;
+
+    -sidebar-btn-bg: #FFC786;
+    -sidebar-btn-hover: #FFB86B;
+
+    -login-btn-bg: #FF9C34;
+    -login-btn-hover: #FFB45F;
+}
+
+
+/* ======================================================
+      TEXTO CLARO NO TEMA ESCURO — AJUSTE GLOBAL
+   ====================================================== */
+
+.tema-azul .label,
+.root .label,
+.label {
+    -fx-text-fill: #ffffff !important;
+}
+
+/* Labels dentro de containers */
+.tema-azul VBox .label,
+.tema-azul HBox .label,
+.root VBox .label,
+.root HBox .label {
+    -fx-text-fill: #ffffff !important;
+}
+
+/* Combobox items */
+.tema-azul .combo-box .list-cell,
+.root .combo-box .list-cell {
+    -fx-text-fill: #ffffff !important;
+}
+
+/* DatePicker arrow */
+.tema-azul .date-picker .arrow-button .arrow,
+.root .date-picker .arrow-button .arrow {
+    -fx-background-color: #ffffff !important;
+}
+
+/* TextArea lines */
+.tema-azul .text-area .content,
+.root .text-area .content {
+    -fx-text-fill: #ffffff !important;
+}
+
+/* Table headers */
+.tema-azul .table-view .column-header .label,
+.root .table-view .column-header .label {
+    -fx-text-fill: #ffffff !important;
+}
